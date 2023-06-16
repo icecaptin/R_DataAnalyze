@@ -42,7 +42,7 @@ mutate(hflights_df, gain = ArrTime - DepTime,
        gain_per_hour = gain / (AirTime / 60))
 
 
-# 실습: mutate() 함수에 의해 추가된 칼럼 뵉 
+# 실습: mutate() 함수에 의해 추가된 칼럼 보기
 select(mutate(hflights_df, gain = ArrDelay - DepDelay, 
               gain_per_hour = gain / (AirTime / 60)),
        Year, Month, ArrDelay, DepDelay, gain, gain_per_hour)
