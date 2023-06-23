@@ -17,9 +17,9 @@ dim(result)
 table(result)
 
 # 단계 2: 교차 분할표 작성을 위한 패키지 설치
-install.packages("gmodels")
+#install.packages("gmodels")
 library(gmodels)
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
 
 # 단계 3: 패키지를 이용한 교차 분할표 작성
@@ -81,3 +81,4 @@ table(data$method2, data$survey2)
 
 # 단계 4: 동질성 검정 - 모든 특성치에 대한 추론검정
 chisq.test(data$method2, data$survey2)
+

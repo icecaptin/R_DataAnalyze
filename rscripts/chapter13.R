@@ -17,7 +17,7 @@ high - X
 
 # 실습: 단일 표본 빈도수와 비율계산
 # 단계 1: 실습 데이터 가져오기 
-setwd("C:/Rwork/Part-III")
+setwd("C:/R-study/Rwork-2nd/Part-III/")
 data <- read.csv("one_sample.csv", header = TRUE)
 head(data)
 
@@ -51,7 +51,7 @@ binom.test(c(14, 150), p = 0.2,
 
 # 실습: 단일 표본 평균 계산하기 
 # 단계 1: 실습 파일 가져오기 
- setwd("C:/Rwork/Part-III")
+ setwd("C:/R-study/Rwork-2nd/Part-III/")
 data <- read.csv("one_sample.csv", header = TRUE) 
 str(data)
 head(data)
@@ -96,7 +96,7 @@ qt(7.08e-05, 108)
 
 # 실습: 두 집단의 subset 작성과 교차분석 수행
 # 단계 1: 실습 파일 가져오기 
-setwd("C:/Rwork/Part-III")
+setwd("C:/R-study/Rwork-2nd/Part-III/")
 data <- read.csv("two_sample.csv", header = TRUE)
 head(data)
 
@@ -128,7 +128,7 @@ prop.test(c(110, 135), c(150, 150),
 
 # 실습: 독립표본 평균 계산
 # 단계 1: 실습 파일 가져오기 
-data <- read.csv("C:/Rwork/Part-III/two_sample.csv", header = TRUE)
+data <- read.csv("C:/R-study/Rwork-2nd/Part-III/two_sample.csv", header = TRUE)
 head(data)
 summary(data)
 

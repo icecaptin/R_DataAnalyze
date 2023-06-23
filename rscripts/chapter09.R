@@ -122,7 +122,7 @@ morpho_mecab(docs)
 morpho_mecab(docs, indiv = FALSE)
 
 # 실습: 워드 클라우드
-install.packages("wordcloud2")
+#install.packages("wordcloud2")
 president_speech$doc[1:100] %>% 
   morpho_mecab(indiv = FALSE) %>% 
   table() %>% 
@@ -182,7 +182,7 @@ knu_dic_df %>%
   count(emotion)
 
 # 실습: 소설을 활용한 감정 분석
-install.packages("epubr")
+# install.packages("epubr")
 # 단계1: 데이터 불러오기
 library(epubr)
 epub("data/jikji.epub") %>% glimpse()
