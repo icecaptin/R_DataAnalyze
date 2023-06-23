@@ -93,6 +93,7 @@ text(result$loadings[ , 1], result$loadings[ , 3],
 
 # 실습: 3차원 산점도로 요인적재량 시각화 
 # 단계 1: 3차원 산점도 패키지 로딩
+install.packages("scatterplot3d")
 library(scatterplot3d)
 
 # 단계 2: 요인점수별 분류 및 3차원 프레임 생성
@@ -133,7 +134,7 @@ cor(subject_factor_df)
 # 단계 1: spss 데이터 셋 가져오기 
 install.packages("memisc")
 library(memisc)
-setwd("C:/Rwork/Part-III")
+setwd("C:/R-study/Rwork-2nd/Part-III/")
 data.spss <- as.data.set(spss.system.file('drinking_water.sav'))
 data.spss[1:11]
 
@@ -179,7 +180,7 @@ length(satisfaction); length(closeness); length(pertinence)
 
 # 실습: 기술 통계량 구하기 
 # 단계 1: 데잍 가져오기 
-product <- read.csv("C:/Rwork/Part-III/product.csv", header = TRUE)
+product <- read.csv("C:/R-study/Rwork-2nd/Part-III/product.csv", header = TRUE, fileEncoding = "cp949")
 head(product)
 
 # 단계 2: 기술 통계량
@@ -205,7 +206,7 @@ cor(product, method = "pearson")
 
 
 # 실습: 방향성 있는 색상으로 표현
-install.packages("corrgram")
+# install.packages("corrgram")
 library(corrgram)
 corrgram(product)
 corrgram(product, upper.panel = panel.conf)
@@ -214,7 +215,7 @@ corrgram(product, lower.panel = panel.conf)
 
 # 실습: 차트에 밀도곡선, 상관성, 유의확률(별표) 추가하기 
 # 단계 1: 패키지 설치 
-install.packages("PerformanceAnalytics")
+# install.packages("PerformanceAnalytics")
 library(PerformanceAnalytics)
 
 # 단게 2: 상관성, p값(*), 정규분포(모수 검정 조건) 시각화 
@@ -224,3 +225,4 @@ chart.Correlation(product, histogram = , pch = "+")
 
 # 실습: 서열척도 대상 상관계수
 cor(product, method = "spearman")
+
