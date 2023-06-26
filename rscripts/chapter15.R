@@ -66,6 +66,7 @@ result.lm
 
 # 실습: 다중 공선성 문제 확인
 # 단계 1: 패키지 설치
+install.packages("car")
 library(car)
 
 # 단계 2: 분산팽창요인(VIF)
@@ -190,6 +191,7 @@ table(result_pred)
 table(result_pred, test$RainTomorrow)
 
 # 단계 7: ROC Curve를 이용한 모델 평가
+install.packages("ROCR")
 library(ROCR)
 pr <- prediction(pred, test$RainTomorrow)
 prf <- performance(pr, measure = "tpr", x.maeasure = "fpr")
@@ -197,6 +199,7 @@ plot(prf)
 
 # 실습: 의사결정 트리 생성: ctree() 함수 이용 
 # 단계 1: party 패키지 설치 
+install.packages("party")
 library(party)
 
 # 단계 2: airquality 데이터 셋 로딩
@@ -314,6 +317,7 @@ plot(tree_model)
 
 # 실습: AdultUCI 데잍 셋을 이용한 분류분석
 # 단계 1: 패키지 설치 및 데이터 셋 구조 보기 
+install.packages("arules")
 library(arules)
 data(AdultUCI)
 str(AdultUCI)
@@ -361,6 +365,7 @@ boxplot(adultResult$capital)
 # 실습: rpart() 함수를 이용한 의사결정 트리 생성
 # 단계 1: 패키지 설치 및 로딩
 library(rpart)
+install.packages("rpart.plot")
 library(rpart.plot)
 
 # 단계 2: 데잍 로딩
@@ -402,6 +407,7 @@ table(weather_pred2, weather$RainTomorrow)
 
 # 실습: 랜덤 포레스트 기본 모델 생성
 # 단계 1: 패키지 설치 및 데이터 셋 가져오기 
+install.packages("randomForest")
 library(randomForest)
 data(iris)
 
